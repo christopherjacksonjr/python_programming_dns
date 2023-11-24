@@ -94,7 +94,7 @@ def dns_query(type, name, server):
         raise ValueError('Invalid type')
     
 
-    qclass = QDCOUNT[type]     # Lookup the Resource Record class being requested
+    qclass = 255    # Lookup the Resource Record class being requested
 
         # This is the query we are asking the DNS Server
     question = qname_encoded + struct.pack('!HH', qtype, qclass)
